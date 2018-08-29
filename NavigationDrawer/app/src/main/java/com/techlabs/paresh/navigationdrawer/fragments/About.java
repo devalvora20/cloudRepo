@@ -1,4 +1,4 @@
-package com.techlabs.paresh.navigationdrawer;
+package com.techlabs.paresh.navigationdrawer.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,20 +6,24 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
-public class Career extends Fragment {
+import com.techlabs.paresh.navigationdrawer.R;
+
+public class About extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //returning our layout file
         //change R.layout.yourlayoutfilename for each of your fragments
-        return inflater.inflate(R.layout.fragment_career, container, false);
+        return inflater.inflate(R.layout.fragment_about, container, false);
     }
-
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        getActivity().setTitle("About");
+        TextView tv=view.findViewById(R.id.textAbout);
+        tv.setText("CHANGED");
 
-        getActivity().setTitle("Career");
     }
 }

@@ -12,6 +12,10 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
 
+import com.techlabs.paresh.navigationdrawer.fragments.About;
+import com.techlabs.paresh.navigationdrawer.fragments.Career;
+import com.techlabs.paresh.navigationdrawer.fragments.Home;
+
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     Fragment fragment;
