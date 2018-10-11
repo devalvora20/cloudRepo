@@ -1,0 +1,7 @@
+INDEX VERSION 1.127
+D:\LocalGitRepo\servlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\265855156.index
+\contact-database-app\src
+D:\LocalGitRepo\servlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2904563387.index
+\contact-servlet-app\src
+D:\LocalGitRepo\servlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1808383620.index
+\beer-advice-servlet-app\src
