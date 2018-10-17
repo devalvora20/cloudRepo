@@ -29,7 +29,7 @@ public class WelcomeServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		 PrintWriter out = response.getWriter();
+		PrintWriter out = response.getWriter();
 		for(int i=0;i<5;i++){
 			if(request.getParameter("developer")!=null)
 				out.println("welcome to servlet app : "+request.getParameter("developer"));

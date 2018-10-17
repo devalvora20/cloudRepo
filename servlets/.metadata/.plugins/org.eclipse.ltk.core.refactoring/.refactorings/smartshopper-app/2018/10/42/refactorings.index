@@ -1,0 +1,8 @@
+1539587907927	Rename method 'isRegistered'
+1539587932086	Rename method 'setRegistered'
+1539587946282	Rename local variable 'isRegistered'
+1539668130653	Delete element
+1539671838730	Delete element
+1539755642193	Rename type 'ViewOrders'
+1539755724399	Rename type 'PlaceOrderService'
+1539756008520	Rename type 'PlaceOrderRepository'
