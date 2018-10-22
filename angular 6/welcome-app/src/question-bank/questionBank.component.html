@@ -1,0 +1,36 @@
+<script src="node_modules/chart.js/src/chart.js"></script>
+<div>
+    <input type="button" class="btn btn-primary" [hidden]="startBtn" (click)='start()' value="Start">
+    <br>
+    <br>
+    <b [hidden]="!gameOver">Correct Answers: {{correctAnswers}}</b>
+    <br>
+    <b [hidden]="!gameOver">Wrong Answers: {{wrongAnswers}}</b>
+    <br>
+    <b [hidden]="!gameOver">Un-answered : {{5-(correctAnswers+wrongAnswers)}}</b>
+    <br>
+    <h6 [hidden]="!gameOver">GAME OVER! click Start button to Restart</h6>
+    
+    <div [hidden]="!gameOver">
+            <canvas baseChart
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            ></canvas>
+    </div>
+    <b>
+        <b [hidden]="!startBtn">{{qtsIndex}}.</b> {{question}}</b>
+    <br>
+    <br>
+    <b *ngFor="let option of options;let i=index">
+        <input [disabled]="optionBtnDisable" type="button" class="btn" (click)='checkAns($event)' id="{{i+1}}" value="{{option}}"
+            style="margin: 10px">
+        <br *ngIf="(i+1)%2==0">
+    </b>
+    <br>
+    <input type="button" class="btn btn-success" [hidden]="!startBtn" (click)='nextQuestion()' value="Next Question ->">
+    <br>
+    <br>
+    <div id="chartContainer" style="width: 100%; height: 300px"></div>
+
+</div>
