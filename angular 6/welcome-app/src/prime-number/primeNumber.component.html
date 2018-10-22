@@ -1,0 +1,5 @@
+<div>
+    is number prime?
+    <input type="text" [style.color]="'white'" [style.background-color]="isNumberPrime==0?'green':isNumberPrime==3?'yellow':'red'"
+        [ngModel]='number1' (ngModelChange)='isPrime($event)'>
+</div>

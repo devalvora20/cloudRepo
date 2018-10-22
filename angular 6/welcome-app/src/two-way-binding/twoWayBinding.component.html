@@ -1,0 +1,11 @@
+<div style="text-align: left">
+    First Name: {{customer.firstName}}<br>
+    First Name:<input type="text" [ngModel]='customer.firstName' (ngModelChange)='firstNameChange($event)'/><br>
+    Last Name:{{customer.lastName}}<br>
+    Last Name:<input type="text" [(ngModel)]='customer.lastName'/>
+    <br><br>
+    product: <select [(ngModel)]='selectedProduct'>
+        <option *ngFor="let product of products">{{product}}</option>
+    </select><br>
+    selected product is<b> {{selectedProduct}}</b>
+</div>

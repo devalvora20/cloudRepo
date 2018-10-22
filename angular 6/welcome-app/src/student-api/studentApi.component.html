@@ -1,0 +1,23 @@
+<div>
+    <input type="button" (click)='loadStudents()' value="Load Students"><br><br>
+    <div>
+        <table class="table table-bordered table-condensed">
+            <tr>
+                <th>Roll no</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Date</th>
+                <th>Gender</th>
+            </tr>
+            <tr *ngFor="let student of students;let i=index "  [style.background-color]="student.isMale | GenderToColor">
+                <td>{{student.rollNo}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.age}}</td>
+                <td>{{student.date}}</td>
+                <td>{{student.isMale | isMale}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

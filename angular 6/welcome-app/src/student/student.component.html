@@ -1,0 +1,19 @@
+<div><h1>Displaying a single student</h1></div>
+<div  ng-init="timeout()" style="text-align:center">
+    <img src="{{student.img}}" height="40px" width="40px">
+    <h4>Name: {{student.name}}</h4>
+    <h4 [style.color]="'blue'">Age: {{student.age}}</h4>
+    <h4 [ngStyle]="myStyles">Roll No: {{student.rollNo}}</h4>
+    <p [ngStyle]="cgpaStyle(student.cgpa)">CGPA: {{student.cgpa}}</p>
+</div>
+<div><h1>Displaying multiple students</h1></div>
+<input type="button" (click)='loadStudents()' value="Load Students">
+<div *ngFor="let student1 of students">
+        
+        <p><img src="{{student1.img}}" height="40px" width="40px"> Name: {{student1.name}}</p>
+        <p [style.color]="'blue'">Age: {{student1.age}}</p>
+        <p [ngStyle]="myStyles">Roll No: {{student1.rollNo}}</p>
+        <p [ngStyle]="cgpaStyle(student1.cgpa)">CGPA: {{student1.cgpa}}</p>
+        <h1>-------------------</h1>
+</div>
+<input type="button" (click)='incCount()' [value]='counter'>

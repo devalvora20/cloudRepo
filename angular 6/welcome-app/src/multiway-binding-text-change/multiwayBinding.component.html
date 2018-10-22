@@ -1,0 +1,14 @@
+<div style="text-align: left">
+    <table style="padding:2px">
+        <tr><td style="text-align: left">text:</td><td><input type="text" [(ngModel)]='name'></td></tr>
+        <tr><td style="text-align: left">font size:</td><td><input type="text" [(ngModel)]='size' (ngModelChange)='fontChange($event)'></td></tr>            
+        <tr><td style="text-align: left">text color:</td><td><select [(ngModel)]='col'  (ngModelChange)='colorChange($event)'>
+            <option *ngFor="let col of cols">{{col}}</option>
+        </select></td></tr>            
+        <tr><td style="text-align: left">text bgcolor:</td><td><select [(ngModel)]='bg'  (ngModelChange)='bgColorChange($event)'>
+            <option *ngFor="let bg of bgs">{{bg}}</option>
+        </select></td></tr>  
+    </table>    
+<u [ngStyle]='customStyle'>{{name}}</u>
+
+</div>

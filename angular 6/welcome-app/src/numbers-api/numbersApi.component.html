@@ -1,0 +1,9 @@
+<div style="text-align: left">
+    <b>Number: </b> <input type="text" [(ngModel)]='num' (keydown)='getFact($event)'><br><br>
+    <b>Facts: </b>
+    <div *ngFor="let fact of facts;let i = index">
+        <div class="card bg-{{color[i%6]}} text-white" style="margin: 8px">
+            <div class="card-body">{{fact}}</div>
+          </div>
+    </div>
+</div>

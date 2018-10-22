@@ -1,0 +1,30 @@
+<style>
+     input[type=button] {
+            border-radius: 50%;
+            background-color: grey;
+            width: 90px;
+            height: 90px;
+        }
+        .resetBtn {
+            background-color: red;;
+            color: white;
+            width: 90px;
+            height: 60px;
+            cursor: pointer;
+        }
+</style>
+<div>
+    <h1 [style.color]="'blue'"> Blue Button Game</h1>
+</div>
+<div>
+    Attempts Left:{{attempts}}
+</div>
+<div>
+    <b *ngFor="let b of buttons;let i = index">
+        <input [disabled]="disable" [ngStyle]="btnStyle[i]" type="button" value="{{i+1}}" (click)="buttonClick(i)">
+        <br *ngIf="(i+1)%5==0">
+    </b>
+</div>
+<h1>{{msg}}</h1>
+<br>
+<button class="resetBtn" (click)="resetClick()" *ngIf="reset">RESET</button>

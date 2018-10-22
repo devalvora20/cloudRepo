@@ -131,7 +131,7 @@
 		<%
 			List orders=(List) request.getAttribute("orders");
 			if(orders==null){
-				out.print("No previous orders");
+				out.print("No previous orders");	
 			}
 			for(int j=0;j<orders.size();j++){
 			CartItem item;
