@@ -1,0 +1,59 @@
+<style>
+    .loader {
+        border: 8px solid #b7ddf7;
+        border-radius: 50%;
+        border-top: 8px solid #3498db;
+        width: 40px;
+        height: 40px;
+        -webkit-animation: spin 1s linear infinite;
+        /* Safari */
+        animation: spin 1s linear infinite;
+    }
+
+    /* Safari */
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<div>
+    <a class="btn btn-primary" [routerLink]="['/add']">Add Student</a>
+    <br>
+    <br>
+    <div [hidden]="loaderHidden" class="loader"></div>
+    <table [hidden]="!loaderHidden" class="table table-bordered table-condensed">
+        <tr>
+            <th>Roll no</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Date</th>
+            <th>Gender</th>
+            <th>Options</th>
+        </tr>
+        <tr *ngFor="let student of students;let i=index " [style.background-color]="student.isMale | GenderToColor">
+            <td>{{student.rollNo}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.date}}</td>
+            <td>{{student.isMale | isMale}}</td>
+            <td><a [routerLink]="['/edit',student.rollNo]" class="btn btn-primary"> Edit </a>&nbsp;<a [routerLink]="['/delete',student.rollNo]" class="btn btn-primary">Delete</a></td>
+        </tr>
+    </table>
+    <br>
+</div>

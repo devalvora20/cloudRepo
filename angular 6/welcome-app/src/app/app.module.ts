@@ -15,6 +15,7 @@ import {StudentApiComponent} from '../student-api/studentApi.component'
 import {ParentComponent} from '../parent/parent.component'
 import {ToggleBtnComponent} from '../parent/toggleBtn.component'
 import {StarComponent} from '../parent/star.component'
+import {TimestampComponent} from '../parent/timestamp.component'
 
 import {PrimeComponentService} from '../prime-number/PrimeComponentService'
 import {NumbersApiService} from '../numbers-api/numbersApiService'
@@ -40,6 +41,7 @@ import { ChartsModule } from 'ng2-charts';
     ParentComponent,
     ToggleBtnComponent,
     StarComponent,
+    TimestampComponent,
     GenderToColor,
     IsMale
   ],

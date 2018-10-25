@@ -1,0 +1,6 @@
+<div>
+    <h4>Are you sure you want to delete student with Roll No= {{rollNo}}</h4><br>
+    <button class="btn btn-success" (click)='delete()'>Yes</button>&nbsp;
+    <a class="btn btn-danger" [routerLink]="['/display']">No</a>
+    <div [hidden]="loaderHidden" class="loader"></div><br>
+</div>

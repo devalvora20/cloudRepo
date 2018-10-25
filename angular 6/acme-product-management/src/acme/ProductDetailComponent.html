@@ -1,0 +1,52 @@
+<style>
+    td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+</style>
+<div style="border-top-right-radius: 5px;border-top-left-radius: 5px;border:2px solid rgb(72, 134, 248)">
+    <div style="padding: 10px;background-color: rgb(72, 134, 248);border-top-left-radius: 2px;border-top-right-radius: 2px">
+        <span style="font-size: 24px;color:white;">Product Detail: {{product.productName}}</span>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div style="margin: 20px">
+                <table style="width:100%">
+                    <tr>
+                        <th>Name:</th>
+                        <td>{{product.productName}}</td>
+                    </tr>
+                    <tr>
+                        <th>Code:</th>
+                        <td>{{product.productCode}}</td>
+                    </tr>
+                    <tr style="margin: 30px">
+                        <th>Description:</th>
+                        <td>{{product.description}}</td>
+                    </tr>
+                    <tr style="margin: 30px">
+                        <th>Availability:</th>
+                        <td>{{product.releaseDate}}</td>
+                    </tr>
+                    <tr style="margin: 30px">
+                        <th>Price:</th>
+                        <td>{{product.price}}</td>
+                    </tr>
+                    <tr style="margin: 30px">
+                        <th>5 Star Rating:</th>
+                        <td tooltip="{{product.starRating}} Stars" placement="left">
+                            <span >
+                                <st-star [num]='product.starRating'></st-star>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <div class="col-md-6"><div style="margin: 40px"><img src="{{product.imageUrl}}" width="250px" height="250px"></div></div>
+    </div>
+    <div style="background-color: rgb(243, 243, 243);padding: 16px">
+        <button type="button" [routerLink]="['/productList']" class="btn btn-default">&#9664; Back</button>
+    </div>
+</div>

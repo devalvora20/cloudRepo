@@ -1,0 +1,28 @@
+
+<div style="border-top-right-radius: 5px;border-top-left-radius: 5px;border:2px solid rgb(72, 134, 248)">
+    <div style="padding: 10px;background-color: rgb(72, 134, 248);border-top-left-radius: 2px;border-top-right-radius: 2px">
+        <span style="font-size: 24px;color:white;">Product List</span>
+    </div>
+    <div style="margin: 6px">
+        Filter by: <input type="text" [(ngModel)]="productFilter" (ngModelChange)='filter()'>
+        <br><br>
+        <table class="table table-condensed">
+            <tr style="color: rgb(72, 134, 248)">
+                <th><button class="btn btn-primary" (click)="imageButton()">{{imgBtn}}</button></th>
+                <th>Product</th>
+                <th>Code</th>
+                <th>Available</th>
+                <th>Price</th>
+                <th>5 Star Rating</th>
+            </tr>
+            <tr *ngFor="let product of products">
+                <td><img [hidden]="!showImg" src="{{product.imageUrl}}" width="40px" height="40px"></td>
+                <td><a [routerLink]="['/productDetail',product.productId]">{{product.productName}}</a></td>
+                <td>{{product.productCode}}</td>
+                <td>{{product.releaseDate}}</td>
+                <td>{{product.price | price}}</td>
+                <td  tooltip="{{product.starRating}} Stars" placement="left" ><st-star  [num]='product.starRating'></st-star></td>
+            </tr>
+        </table>
+    </div>
+</div>
