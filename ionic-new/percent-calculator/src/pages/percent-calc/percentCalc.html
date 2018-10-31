@@ -1,0 +1,109 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Percent Calculator
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card padding>
+        <ion-row>
+            <ion-col col-1>
+                <ion-item no-lines>
+                    <ion-label color="primary">What is </ion-label>
+                </ion-item>
+            </ion-col>
+            <ion-col col-1>
+                <ion-item>
+                    <ion-input style="border: 1px solid #488aff" type="text" (ngModelChange)='x1Change($event)' [(ngModel)]='num11'></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col col-1>
+                <ion-item no-lines>
+                    <ion-label color="primary"> % of </ion-label>
+                </ion-item>
+            </ion-col>
+            <ion-col col-1>
+                <ion-item>
+                    <ion-input style="border: 1px solid #488aff" type="text" (ngModelChange)='y1Change($event)' [(ngModel)]='num12'></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col col-1>
+                <ion-item no-lines>
+                    <ion-label color="primary"> ? </ion-label>
+                </ion-item>
+            </ion-col>
+            <ion-col col-2>
+                <ion-item no-lines>
+                    <ion-label color="secondary">{{ans1 | number:'1.2-2'}}</ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+
+    <ion-card padding>
+        <ion-row>
+            <ion-col col-1>
+                <ion-item>
+                    <ion-input style="border: 1px solid #488aff" type="text" (ngModelChange)='x2Change($event)' [(ngModel)]='num21'></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col col-2>
+                <ion-item no-lines>
+                    <ion-label color="primary"> is what percent of </ion-label>
+                </ion-item>
+            </ion-col>
+            <ion-col col-1>
+                <ion-item>
+                    <ion-input style="border: 1px solid #488aff" type="text" (ngModelChange)='y2Change($event)' [(ngModel)]='num22'></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col col-1>
+                <ion-item no-lines>
+                    <ion-label color="primary"> ? </ion-label>
+                </ion-item>
+            </ion-col>
+            <ion-col col-2>
+                <ion-item no-lines>
+                    <ion-label color="secondary">{{ans2 | number:'1.2-2'}} %</ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+
+    <ion-card padding>
+        <ion-row>
+            <ion-col col-4>
+                <ion-item no-lines>
+                    <ion-label color="primary">What is the percentage increase/decrease from </ion-label>
+                </ion-item>
+            </ion-col>
+            <ion-col col-1>
+                <ion-item>
+                    <ion-input style="border: 1px solid #488aff" type="text" (ngModelChange)='x3Change($event)' [(ngModel)]='num31'></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col col-1>
+                <ion-item no-lines>
+                    <ion-label color="primary"> to </ion-label>
+                </ion-item>
+            </ion-col>
+            <ion-col col-1>
+                <ion-item>
+                    <ion-input style="border: 1px solid #488aff" type="text" (ngModelChange)='y3Change($event)' [(ngModel)]='num32'></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col col-1>
+                <ion-item no-lines>
+                    <ion-label color="primary"> ? </ion-label>
+                </ion-item>
+            </ion-col>
+            <ion-col col-2>
+                <ion-item no-lines>
+                    <ion-label color="secondary">{{ans3 | number:'1.2-2'}} %</ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>

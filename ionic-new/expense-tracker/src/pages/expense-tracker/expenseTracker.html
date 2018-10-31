@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Expense Tracker
+        </ion-title>
+        <ion-buttons right margin-right="40px">
+            <button ion-button right icon-start (click)="logOut()">
+                <ion-icon name="log-out"></ion-icon>
+                Log Out
+            </button>
+        </ion-buttons>
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        Expense List:
+    </ion-item>
+    <ion-list>
+        <ion-card style="cursor: pointer" *ngFor="let expense of expenses;let i=index" (click)="editExpense(expense.id)">
+            <ion-card-content>
+
+                <ion-label>
+                    <b>{{expense.category}}</b>
+                </ion-label>
+
+                <ion-row>
+                    <ion-label>
+                        ${{expense.cost}}
+                    </ion-label>
+                    <ion-label text-right>{{expense.description}}</ion-label>
+                </ion-row>
+                <ion-label color='third'>{{expense.date}}</ion-label>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+    <!-- <ion-list>
+        <button ion-item *ngFor="let expense of expenses;let i=index" (click)="editExpense(expense.id)">
+            <ion-label>{{expense.category}}</ion-label>
+            <ion-label>${{expense.cost}}</ion-label>
+            <ion-label text-left>{{expense.date}}</ion-label>
+            <ion-label text-right>{{expense.description}}</ion-label>
+        </button>
+    </ion-list> -->
+    <ion-fab right bottom padding>
+        <button ion-fab (click)="addExpense()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+</ion-content>

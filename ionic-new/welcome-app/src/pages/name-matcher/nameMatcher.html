@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Name Matcher
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating>Enter First Name</ion-label>
+    <ion-input autofocus clearInput type="text" [(ngModel)]='firstName' (ngModelChange)='match()'></ion-input>
+  </ion-item>
+  <div style="text-align: center" padding>
+    <ion-chip color="danger" style="width: 150px;">
+      <ion-icon name="heart" color="danger"></ion-icon>
+      <ion-label>{{result}} %</ion-label>
+    </ion-chip>
+  </div>
+  <ion-item>
+    <ion-label floating>Enter Second Name</ion-label>
+    <ion-input clearInput type="text" [(ngModel)]='secondName' (ngModelChange)='match()'></ion-input>
+  </ion-item>
+</ion-content>

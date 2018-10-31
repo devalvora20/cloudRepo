@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Number API
+        </ion-title>
+        <ion-buttons right margin-right="40px" (click)='getFact("Enter")'>
+            <button ion-button icon-only>
+                <ion-icon name="add-circle" color="secondary"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-label color="primary">Number: </ion-label>
+        <ion-input placeholder="Enter a number" type="number" [(ngModel)]='num' (keydown)='getFact($event)'></ion-input>
+    </ion-item>
+    <ion-card padding *ngFor="let fact of facts;let i = index">
+        <ion-item text-wrap color="{{color[i%6]}}">
+            <ion-label>{{fact}} </ion-label>
+        </ion-item>
+    </ion-card>
+    <ion-buttons margin-right="40px" (click)='nextPage()' padding>
+        <button ion-button padding>
+            Goto Grocery List
+        </button>
+    </ion-buttons>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Expense Tracker
+        </ion-title>
+
+        <ion-buttons right margin-right="40px" (click)='addExpense()'>
+            <button ion-button style="font-size: 22px; " [disabled]="!myForm.form.valid">
+                <ion-icon [hidden]='!isEdit' name='checkmark-circle' color="secondary"></ion-icon>
+                <ion-icon [hidden]='isEdit' name='add-circle' color="secondary"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-buttons right margin-right="40px" [hidden]='!isEdit' (click)='deleteExpense()'>
+                <button ion-button icon-only>
+                    <ion-icon name="trash" color="dark"></ion-icon>
+                </button>
+            </ion-buttons>
+        <ion-buttons right margin-right="40px" (click)='clearExpense()'>
+            <button ion-button icon-only>
+                <ion-icon name="close-circle" color="danger"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form #myForm="ngForm">
+        <ion-item>
+            <ion-label floating>Description</ion-label>
+            <ion-input clearInput type="text" [(ngModel)]='description'  name='description' required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Cost</ion-label>
+            <ion-input clearInput type="number" [(ngModel)]='cost' name='cost'  required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Date</ion-label>
+            <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="date" name="date"  required></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Category</ion-label>
+            <ion-select [(ngModel)]="category" name="category"  required>
+                <ion-option value="Food">Food</ion-option>
+                <ion-option value="Travel">Travel</ion-option>
+                <ion-option value="Other">Other</ion-option>
+            </ion-select>
+        </ion-item>
+    </form>
+</ion-content>
