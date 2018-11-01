@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            My Notes
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item-group [reorder]="reordering" (ionItemReorder)="$event.applyTo(notes)">
+            <ion-item-sliding *ngFor="let note of notes">
+                <button ion-item (click)="editNote(note.id)">
+                    <h2>{{note.title}}</h2>
+                    <p color="lightgray">{{note.description}}</p>
+                    <ion-icon name="play" [hidden]="reordering" item-right></ion-icon>
+                </button>
+
+                <ion-item-options side="right">
+                    <button ion-button color="danger" (click)="deleteNote(note.id)">
+                        <ion-row>
+                            <ion-icon name="trash" icon-start></ion-icon>&nbsp;
+                            <div style="padding-top: 2px">Delete</div>
+                        </ion-row>
+                    </button>
+                </ion-item-options>
+
+            </ion-item-sliding>
+        </ion-item-group>
+    </ion-list>
+    <ion-label padding color="danger">{{msg}}</ion-label>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <button ion-button left [disabled]="reordering" color="danger" (click)="addNote()">
+            <ion-row>
+                <ion-icon name="appname-new-note" icon-start></ion-icon>&nbsp;
+                <div style="padding-top: 2px">New Note</div>
+            </ion-row>
+        </button>
+        <ion-buttons right color="dark">
+            <button ion-button (click)="toggleReorder()">
+                <ion-row>
+                    <ion-icon name="shuffle" icon-start></ion-icon>&nbsp;
+                    <div style="padding-top: 2px">{{reorderButton}}</div>
+                </ion-row>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            {{type}} Note
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card no-padding>
+        <ion-card-content no-padding>
+            <form #noteForm="ngForm" no-padding>
+                <ion-item>
+                    <ion-input placeholder="Title" name="title" [(ngModel)]='title' clearInput required></ion-input>
+                </ion-item>
+                <div style="padding: 2px;border-bottom: 1px solid lightgray"></div>
+                <ion-item>
+                    <ion-textarea placeholder="Description" [(ngModel)]='description' name="description" rows="7" maxLength="500" required></ion-textarea>
+                </ion-item>
+            </form>
+        </ion-card-content>
+    </ion-card>
+    <ion-buttons padding (click)="saveNote()">
+        <button ion-button full [disabled]="!noteForm.form.valid">Save</button>
+    </ion-buttons>
+</ion-content>
