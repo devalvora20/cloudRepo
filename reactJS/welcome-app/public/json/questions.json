@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "qt": "Sensex is related to",
+        "op": [
+            " BSE",
+            " NSE",
+            " RBI",
+            " SEBI",
+            "abc"
+        ],
+        "ans": "2"
+    },
+    {
+        "id": 2,
+        "qt": "Name of the Nokias mobile phone operating system",
+        "op": [
+            " Android",
+            " Windows",
+            " Symbian",
+            " JAVA"
+        ],
+        "ans": "3"
+    },
+    {
+        "id": 3,
+        "qt": "Who among following ordered Jallian Wala Bagh Massacre ?",
+        "op": [
+            " Lord Mountbatten",
+            " John Simon",
+            " Reginald Dyer",
+            " N.D MacEven"
+        ],
+        "ans": "3"
+    },
+    {
+        "id": 4,
+        "qt": "MS Dhoni is the _______ captain of Indian Cricket Team",
+        "op": [
+            " 44",
+            " 23",
+            " 31",
+            " 34",
+            " 38"
+        ],
+        "ans": "4"
+    },
+    {
+        "id": 5,
+        "qt": "Which was the India’s first scheduled airline ?",
+        "op": [
+            " Tata Airlines",
+            " Air India",
+            " Air Birla",
+            " Indian Airlines"
+        ],
+        "ans": "1"
+    },
+    {
+        "id": 6,
+        "qt": "Mount Everest is located in ?",
+        "op": [
+            " India",
+            " Nepal",
+            " Tibet",
+            " China"
+        ],
+        "ans": "2"
+    },
+    {
+        "id": 7,
+        "qt": "Which soil is suitable for agriculture ?",
+        "op": [
+            " Red soil",
+            " Black soil",
+            " Peaty soil",
+            " sand"
+        ],
+        "ans": "3"
+    },
+    {
+        "id": 8,
+        "qt": "The device used for measuring altitudes is ?",
+        "op": [
+            " altimeter",
+            " ammeter",
+            " audiometer",
+            " galvanometer"
+        ],
+        "ans": "1"
+    },
+    {
+        "id": 9,
+        "qt": "The World Largest desert is ?",
+        "op": [
+            " Thar",
+            " Kalahari",
+            " Sahara",
+            " Sonoran"
+        ],
+        "ans": "3"
+    },
+    {
+        "id": 10,
+        "qt": "Punjab is famous for ?",
+        "op": [
+            " Nylon textile",
+            " Silk textile",
+            " Cotton textile",
+            " Woolen textile"
+        ],
+        "ans": "4"
+    }
+]
