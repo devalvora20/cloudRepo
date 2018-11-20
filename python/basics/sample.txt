@@ -1,0 +1,4 @@
+Hello this is a sample text file
+It has multiple lines
+I appended this content from program
+I appended this content from program
