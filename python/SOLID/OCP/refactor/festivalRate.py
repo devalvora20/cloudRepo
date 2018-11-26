@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod,ABCMeta
-class AbstractClass(metaclass=ABCMeta):
+class FestivalRate(metaclass=ABCMeta):
     @abstractmethod
-    def absMethod(self):
+    def getRate(self):
         pass

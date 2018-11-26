@@ -16,9 +16,6 @@ class Invoice:
     def totalCost(self):
         return self.calculateDiscount() + self.calculateTax()
 
-    def printInvoice(self):
-        print("Number =" ,self.number , "Name = " ,self.name,"Total Cost =",self.totalCost())
-
     def getNumber(self):
         return self.number
 
