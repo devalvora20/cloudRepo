@@ -1,0 +1,5 @@
+nts:",desigWiseList["president"])
+# print("No of Managers:",desigWiseList["manager"])
+# print("No of Clerks:",desigWiseList["clerk"])
+# print("No of Analysts:",desigWiseList["analyst"])
+# print("No of Salesman:",desigWiseList["salesman"])
